@@ -50,7 +50,7 @@ async def start(client, message):
                     InlineKeyboardButton('😊 𝖠𝖻𝗈𝗎𝗍', callback_data='about')
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.reply_photo(
+        await message.reply_photo(
             photo="https://graph.org/file/339f8a1457d09d25b150a.jpg",
             caption=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,            
