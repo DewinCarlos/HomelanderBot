@@ -28,6 +28,7 @@ logger.setLevel(logging.ERROR)
 
 BUTTONS = {}
 SPELL_CHECK = {}
+PICS = https://graph.org/file/339f8a1457d09d25b150a.jpg
 
 @Client.on_message((filters.group | filters.private) & filters.text & filters.incoming)
 async def give_filter(client, message):
@@ -460,7 +461,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.edit_message_media(
-            InputMediaPhoto(photo="https://graph.org/file/339f8a1457d09d25b150a.jpg"),
+            InputMediaPhoto(random.choice(PICS))
             caption=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,            
             parse_mode=enums.ParseMode.HTML
