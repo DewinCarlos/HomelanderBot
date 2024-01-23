@@ -450,7 +450,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "pages":
         await query.answer()
-    elif query.data == "start":
+    elif query.message.data == "start":
         buttons = [[
                     InlineKeyboardButton('➕ 𝖠𝖽𝖽 𝖬𝖾 𝖳𝗈 𝖸𝗈𝗎𝗋 𝖦𝗋𝗈𝗎𝗉 ➕', url=f"http://t.me/{temp.U_NAME}?startgroup=true")
                 ],[
@@ -459,7 +459,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('😊 𝖠𝖻𝗈𝗎𝗍', callback_data='about')
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.edit_message_media(
+        await query.message.edit_message_media(
             photo="https://graph.org/file/339f8a1457d09d25b150a.jpg",
             caption=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,            
