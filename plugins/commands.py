@@ -50,10 +50,10 @@ async def start(client, message):
                     InlineKeyboardButton('😊 𝖠𝖻𝗈𝗎𝗍', callback_data='about')
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_text(
-            text=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
-            reply_markup=reply_markup,
-            disable_web_page_preview=True,
+        await query.message.reply_photo(
+            photo="https://graph.org/file/339f8a1457d09d25b150a.jpg",
+            caption=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
+            reply_markup=reply_markup,            
             parse_mode=enums.ParseMode.HTML
         )
         return
