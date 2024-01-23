@@ -29,7 +29,7 @@ AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 #request channel info
 auth_channel = environ.get('AUTH_CHANNEL')
 AUTH_CHANNEL = -1001960547113
-REQ_CHANNEL = -1001960547113
+REQ_CHANNEL = -1001837910026
 JOIN_REQS_DB = environ.get('JOIN_REQS_DB', 'mongodb+srv://Zx:Zx@cluster0.9jp8ahi.mongodb.net/?retryWrites=true&w=majority')
 
 # MongoDB information
