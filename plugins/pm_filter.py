@@ -483,11 +483,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "start":
-        buttons = [[
-            InlineKeyboardButton('channel', url=f"https://t.me/raixchat"),
-            InlineKeyboardButton('group', callback_data='source')
-        ],[
-            InlineKeyboardButton('owner', callback_data='start'),
+        buttons = [[                                
+            InlineKeyboardButton('owner', callback_data='help'),
             InlineKeyboardButton('❌ 𝖢𝗅𝗈𝗌𝖾', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
