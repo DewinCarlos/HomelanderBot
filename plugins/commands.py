@@ -125,7 +125,6 @@ async def start(client, message):
         file_id=file_id,
         caption=f_caption,
         reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('🚸 ᴅᴇʟᴇᴛᴇ', callback_data='close_pages'), InlineKeyboardButton('♨️ ᴀʙᴏᴜᴛ', url=f"https://t.me/blasterindex") ],[ InlineKeyboardButton(text=f'🌿 Fɪʟᴇ sɪᴢᴇ 【 {size} 】🌿', callback_data='gxneo') ]] ))
-    ok = await message.reply(DELETE_TXT)
     await asyncio.sleep(300)
     await f.delete()
     await ok.delete()
