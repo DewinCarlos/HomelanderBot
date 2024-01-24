@@ -468,13 +468,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer('Piracy Is Crime')
     elif query.data == "help":
         buttons = [[
-                    InlineKeyboardButton('🏘 𝖧𝗈𝗆𝖾', callback_data='fuck')
+                    InlineKeyboardButton('🔕 Cʟɪᴄᴋ Tᴏ Cʟᴏsᴇ Tʜɪs Bᴜᴛᴛᴏɴs 🔕', callback_data='fuck')
                 ],[
-                    InlineKeyboardButton('♻️ Status', callback_data='stats'),
-                    InlineKeyboardButton('♻️ Status', callback_data='stats')
+                    InlineKeyboardButton('👨‍🔧 Oᴡɴᴇʀ', callback_data='about'),
+                    InlineKeyboardButton('🎬 Cʜᴀɴɴᴇʟ', callback_data='stats')
                 ],[
-                    InlineKeyboardButton('♻️ Status', callback_data='stats'),
-                    InlineKeyboardButton('♻️ Status', callback_data='stats')
+                    InlineKeyboardButton('👥 Gʀᴏᴜᴘ', callback_data='stats'),
+                    InlineKeyboardButton('🔒 Cʟᴏsᴇ', callback_data='close_data')
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
