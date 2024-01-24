@@ -460,7 +460,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('😊 𝖠𝖻𝗈𝗎𝗍', callback_data='about')
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_photo(
+        await query.edit_photo(
             photo="https://telegra.ph/file/4bb1968bd091453b0070c.jpg",
             text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,            
