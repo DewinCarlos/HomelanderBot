@@ -480,6 +480,21 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "start":
         buttons = [[
+            InlineKeyboardButton('channel', url=f"https://t.me/raixchat"),
+            InlineKeyboardButton('group', callback_data='source')
+        ],[
+            InlineKeyboardButton('owner', callback_data='start'),
+            InlineKeyboardButton('❌ 𝖢𝗅𝗈𝗌𝖾', callback_data='close_data')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.ABOUT_TXT.format(temp.B_NAME),
+            reply_markup=reply_markup,
+            disable_web_page_preview=True,
+            parse_mode=enums.ParseMode.HTML
+        )
+    elif query.data == "about":
+        buttons = [[
             InlineKeyboardButton('🧬 𝖲𝗎𝗉𝗉𝗈𝗋𝗍 𝖦𝗋𝗈𝗎𝗉', url=f"https://t.me/raixchat"),
             InlineKeyboardButton('📍 𝖲𝗈𝗎𝗋𝖼𝖾 𝖢𝗈𝖽𝖾', callback_data='source')
         ],[
