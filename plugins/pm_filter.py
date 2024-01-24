@@ -460,8 +460,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('😊 𝖠𝖻𝗈𝗎𝗍', callback_data='about')
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await client.edit_message_media(
-            InputMediaPhoto(PICS),
+        await query.message.edit.text(        
             caption=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,            
             parse_mode=enums.ParseMode.HTML
