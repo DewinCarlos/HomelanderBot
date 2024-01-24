@@ -124,7 +124,7 @@ async def start(client, message):
         chat_id=message.from_user.id,
         file_id=file_id,
         caption=f_caption,
-        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚡️ 𝗕𝗟𝗔𝗦𝗧𝗘𝗥 𝗜𝗡𝗗𝗘𝗫 ⚡️', url=f"https://t.me/blasterindex") ],[ InlineKeyboardButton('⚡️ 𝗕𝗟𝗔𝗦𝗧𝗘𝗥 𝗜𝗡𝗗𝗘𝗫 ⚡️', url=f"https://t.me/blasterindex") ]] ))
+        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚡️ 𝗕𝗟𝗔𝗦𝗧𝗘𝗥 𝗜𝗡𝗗𝗘𝗫 ⚡️', url=f"https://t.me/blasterindex"), InlineKeyboardButton('⚡️ 𝗕𝗟𝗔𝗦𝗧𝗘𝗥 𝗜𝗡𝗗𝗘𝗫 ⚡️', url=f"https://t.me/blasterindex") ],[ InlineKeyboardButton('⚡️ 𝗕𝗟𝗔𝗦𝗧𝗘𝗥 𝗜𝗡𝗗𝗘𝗫 ⚡️', url=f"https://t.me/blasterindex") ]] ))
     ok = await message.reply(DELETE_TXT)
     await asyncio.sleep(300)
     await f.delete()
