@@ -130,7 +130,6 @@ async def start(client, message):
             ],[                    
                 InlineKeyboardButton(text=f'🌿 Fɪʟᴇ sɪᴢᴇ 【 {size} 】🌿', callback_data='close_data')
               ]]    
-    #ok = await message.reply(DELETE_TXT)
     await asyncio.sleep(6)
     await f.delete()
     await ok.delete()
