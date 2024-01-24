@@ -471,9 +471,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('🔕 Cʟɪᴄᴋ Tᴏ Cʟᴏsᴇ Tʜɪs Bᴜᴛᴛᴏɴs 🔕', callback_data='fuck')
                 ],[
                     InlineKeyboardButton('👨‍🔧 Oᴡɴᴇʀ', callback_data='about'),
-                    InlineKeyboardButton('🎬 Cʜᴀɴɴᴇʟ', callback_data='stats')
+                    InlineKeyboardButton('🎬 Cʜᴀɴɴᴇʟ', url=f"https://t.me/film_hous")
                 ],[
-                    InlineKeyboardButton('👥 Gʀᴏᴜᴘ', callback_data='stats'),
+                    InlineKeyboardButton('👥 Gʀᴏᴜᴘ', url=f"https://t.me/cenEma9"),
                     InlineKeyboardButton('🔒 Cʟᴏsᴇ', callback_data='close_data')
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
