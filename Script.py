@@ -1,11 +1,7 @@
 class script(object):
-    START_TXT = """<b>𝖸𝗈 {}, 𝖭𝗂𝖼𝖾 𝖳𝗈 𝖬𝖾𝖾𝗍 𝖸𝗈𝗎</b> 🎊
-
-I'm Powerful Auto-Filter Bot You Can Use Me As A Auto-filter in Your Group... 
-
-𝖢𝗁𝖾𝖼𝗄𝗈𝗎𝗍 <a href='https://t.me/blasterindex'>☃️ 𝗕𝗟𝗔𝗦𝗧𝗘𝗥 𝗜𝗡𝗗𝗘𝗫 ☃️</a>
-
-𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝖽 𝖡𝗒 <a href='https://t.me/piroxbots'>[𝖯𝖨𝖱𝖮]</a>"""
+    START_TXT = """<b>Hᴇʟʟᴏ {}
+    
+    Sᴏʀʀʏ ɪ ᴏɴʟʏ ᴡᴏʀᴋ ᴏɴ CɪɴᴇᴍᴀCᴏᴍᴘᴀɴʏ Gʀᴏᴜᴘ. Nᴏ ᴏᴛʜᴇʀ ᴄᴏᴍᴍᴀɴᴅ ᴡɪʟʟ ᴡᴏʀᴋ ᴏɴ ᴛʜɪs ʙᴏᴛ ᴇxᴄᴇᴘᴛ sᴛᴀʀᴛ. ᴅᴏɴ’ᴛ ᴡᴀsᴛᴇ ʏᴏᴜʀ ᴛɪᴍᴇ</b>"""
 
     HELP_TXT = """🔖 𝗛𝗲𝘆 𝗧𝗵𝗲𝗿𝗲 {} ,  
 𝖨𝗍'𝗌 𝖭𝗈𝗍 𝖧𝖺𝗋𝖽 𝖳𝗈 𝖴𝗌𝖾 𝖬𝖾,
