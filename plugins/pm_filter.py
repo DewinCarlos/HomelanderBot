@@ -28,7 +28,7 @@ logger.setLevel(logging.ERROR)
 
 BUTTONS = {}
 SPELL_CHECK = {}
-PICS = https://graph.org/file/339f8a1457d09d25b150a.jpg
+PICS = 'https://graph.org/file/339f8a1457d09d25b150a.jpg'
 
 @Client.on_message((filters.group | filters.private) & filters.text & filters.incoming)
 async def give_filter(client, message):
