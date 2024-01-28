@@ -43,7 +43,7 @@ LOG_CHANNEL = -1001960547113
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), False)
 IMDB = is_enabled((environ.get('IMDB', "False")), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), False)
-CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", '<code>{file_name}</code>\n\n<b>========= • ✠ • ===========\n▣ ɢʀᴏᴜᴘ : @cenEma9\n▣ ᴄʜᴀɴɴᴇʟ : @film_hous\n========= • ✠ • ===========</b>')
+CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", '<b>📁 FɪʟᴇNᴀᴍᴇ :</b> <code>{file_name}</code>\n\n𝖳𝗁𝗂𝗌 𝖥𝗂𝗅𝖾 𝖶𝗂𝗅𝗅 𝖡𝖾 𝖣𝖾𝗅𝖾𝗍𝖾𝖽 𝖥𝗋𝗈𝗆 𝖳𝗁𝗂𝗌 𝖦𝗋𝗈𝗎𝗉 𝖶𝗂𝗍𝗁𝗂𝗇 2 𝖬𝗂𝗇𝗎𝗍𝖾𝗌 𝖣𝗎𝖾 𝗍𝗈 𝖢𝗈𝗉𝗒𝗋𝗂𝗀𝗁𝗍\n\n<b>⏩ How To Forward : Click Here</b>')
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "🏷 𝖳𝗂𝗍𝗅𝖾: <a href={url}>{title}</a> \n🔮 𝖸𝖾𝖺𝗋: {year} \n⭐️ 𝖱𝖺𝗍𝗂𝗇𝗀𝗌: {rating}/ 10  \n🎭 𝖦𝖾𝗇𝖾𝗋𝗌: {genres} \n\n🎊 𝖯𝗈𝗐𝖾𝗋𝖾𝖽 𝖡𝗒 [[𝖯𝖨𝖱𝖮]](t.me/piroxbots)")
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
