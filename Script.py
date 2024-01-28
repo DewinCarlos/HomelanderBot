@@ -15,11 +15,10 @@ Sᴏʀʀʏ ɪ ᴏɴʟʏ ᴡᴏʀᴋ ᴏɴ CɪɴᴇᴍᴀCᴏᴍᴘᴀɴʏ Gʀᴏ
 
 <a href='https://t.me/piro_tuts'>𝗧𝘂𝘁𝗼𝗿𝗶𝗮𝗹 𝗩𝗶𝗱𝗲𝗼</a>"""
 
-    ABOUT_TXT = """<b>○ 𝖬𝗒 𝖭𝖺𝗆𝖾: {}
-○ 𝖢𝗋𝖾𝖺𝗍𝗈𝗋 : <a href='https://t.me/piroxbots'>[𝖯𝖨𝖱𝖮]</a>
-○ 𝖫𝖺𝗇𝗀𝗎𝖺𝗀𝖾 : <a href='https://www.python.org/downloads/release/python-3106/'>𝖯𝗒𝗍𝗁𝗈𝗇 𝟥</a>
-○ 𝖲𝖾𝗋𝗏𝖾𝗋 : <a href='https://cloud.google.com/learn/what-is-a-virtual-private-server'>VPS</a>
-○ 𝖣𝖺𝗍𝖺𝖻𝖺𝗌𝖾 : <a href='https://www.mongodb.com'>𝖬𝗈𝗇𝗀𝗈𝖣𝖡 𝖥𝗋𝖾𝖾 𝖳𝗂𝖾𝗋</a>"""
+    ABOUT_TXT = """⍟───[🤴 ʙᴏᴛ ᴅᴇᴠ ᴅᴇᴛᴀɪʟs 🤴]───⍟
+➦ ᴏᴡɴᴇʀ ɴᴀᴍᴇ : Dᴇᴠɪɴ
+➨ ᴜsᴇʀɴᴀᴍᴇ : #E300W
+➥ ᴘᴇʀᴍᴀɴᴇɴᴛ ᴅᴍ ʟɪɴᴋ : <a href='https://t.me/my_devs'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>"""
 
     SOURCE_TXT = """𝗡𝗢𝗧𝗘:
 ⚠️ 𝖳𝗁𝗂𝗌 𝖡𝗈𝗍 𝖨𝗌 𝖭𝗈𝗍 𝖠𝗇 𝖮𝗉𝖾𝗇 𝖲𝗈𝗎𝗋𝖼𝖾 𝖯𝗋𝗈𝗃𝖾𝖼𝗍.!
