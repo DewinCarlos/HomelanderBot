@@ -414,9 +414,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
             chat_id=query.from_user.id,
             file_id=file_id,
             caption=f_caption,
-            protect_content=True if ident == 'checksubp' else False,            
+            protect_content=True if ident == 'checksubp' else False,  
+            reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('▪️ 𝗦𝗣𝗜𝗗𝗘𝗥 𝗗𝗕 ▪️', url=f"https://t.me/SPIDERxDB") ] ] ))
         ok = await message.reply(DELETE_TXT)
-        await f.asyncio.sleep(300)
+        await asyncio.sleep(300)
         await f.delete()
         await message.reply("**𝖸𝗈𝗎𝗋 𝖥𝗂𝗅𝖾 𝖧𝖺𝗌 𝖡𝖾𝖾𝗇 𝖣𝖾𝗅𝖾𝗍𝖾𝖽 𝖳𝗈 𝖠𝗏𝗈𝗂𝖽 𝖢𝗈𝗉𝗒𝗋𝗂𝗀𝗁𝗍 𝖨𝗇𝖿𝗋𝗂𝗇𝗀𝖾𝗆𝖾𝗇𝗍.**\n𝖢𝗁𝖾𝖼𝗄𝗈𝗎𝗍 <a href='https://t.me/blasterindex'>☃️ 𝗕𝗟𝗔𝗦𝗧𝗘𝗥 𝗜𝗡𝗗𝗘𝗫 ☃️</a>")
         return
