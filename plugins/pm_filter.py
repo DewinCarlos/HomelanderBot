@@ -790,33 +790,27 @@ async def global_filters(client, message, text=True):
                             await client.send_message(group_id, reply_text, disable_web_page_preview=True)
                         else:
                             button = eval(btn)
-                            g = await client.send_message(
+                            await client.send_message(
                                 group_id,
                                 reply_text,
                                 disable_web_page_preview=True,
                                 reply_markup=InlineKeyboardMarkup(button),
-                                reply_to_message_id=reply_id, 
-                            await asyncio.sleep(10),
-                            await g.delete()
+                                reply_to_message_id=reply_id                            
                             )
                     elif btn == "[]":
-                        g = await client.send_cached_media(
+                        await client.send_cached_media(
                             group_id,
                             fileid,
                             caption=reply_text or "",
-                            reply_to_message_id=reply_id,
-                            await asyncio.sleep(10),
-                            await g.delete()
+                            reply_to_message_id=reply_id                            
                         )
                     else:
                         button = eval(btn)
-                        g = await message.reply_cached_media(
+                        await message.reply_cached_media(
                             fileid,
                             caption=reply_text or "",
                             reply_markup=InlineKeyboardMarkup(button),
-                            reply_to_message_id=reply_id, 
-                            await asyncio.sleep(10),
-                            await g.delete()
+                            reply_to_message_id=reply_id                            
                         )
                 except Exception as e:
                     logger.exception(e)
