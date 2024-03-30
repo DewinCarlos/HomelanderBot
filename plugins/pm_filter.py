@@ -795,8 +795,8 @@ async def global_filters(client, message, text=True):
                                 reply_text,
                                 disable_web_page_preview=True,
                                 reply_markup=InlineKeyboardMarkup(button),
-                                reply_to_message_id=reply_id 
-                                await asyncio.sleep(10)
+                                reply_to_message_id=reply_id, 
+                                await asyncio.sleep(10),
                                 await g.delete()
                             )
                     elif btn == "[]":
@@ -804,8 +804,8 @@ async def global_filters(client, message, text=True):
                             group_id,
                             fileid,
                             caption=reply_text or "",
-                            reply_to_message_id=reply_id 
-                            await asyncio.sleep(10)
+                            reply_to_message_id=reply_id,
+                            await asyncio.sleep(10),
                             await g.delete()
                         )
                     else:
@@ -814,8 +814,8 @@ async def global_filters(client, message, text=True):
                             fileid,
                             caption=reply_text or "",
                             reply_markup=InlineKeyboardMarkup(button),
-                            reply_to_message_id=reply_id 
-                            await asyncio.sleep(10)
+                            reply_to_message_id=reply_id, 
+                            await asyncio.sleep(10),
                             await g.delete()
                         )
                 except Exception as e:
