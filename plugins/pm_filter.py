@@ -796,8 +796,8 @@ async def global_filters(client, message, text=True):
                                 disable_web_page_preview=True,
                                 reply_markup=InlineKeyboardMarkup(button),
                                 reply_to_message_id=reply_id, 
-                                await asyncio.sleep(10),
-                                await g.delete()
+                            await asyncio.sleep(10),
+                            await g.delete()
                             )
                     elif btn == "[]":
                         g = await client.send_cached_media(
