@@ -770,7 +770,7 @@ async def advantage_spell_chok(msg):
     await msg.reply("𝖨 𝖢𝗈𝗎𝗅𝖽𝗇'𝗍 𝖥𝗂𝗇𝖽 𝖠𝗇𝗒𝗍𝗁𝗂𝗇𝗀 𝖱𝖾𝗅𝖺𝗍𝖾𝖽 𝖳𝗁𝖺𝗍.\n𝗗𝗶𝗱 𝗬𝗼𝘂 𝗠𝗲𝗮𝗻 𝗔𝗻𝘆 𝗢𝗳 𝗧𝗵𝗲𝘀𝗲.?",
                     reply_markup=InlineKeyboardMarkup(btn))
 
-async def global_filters(client, message, text=False):
+async def global_filters(client, message, text=True):
     group_id = message.chat.id
     name = text or message.text
     reply_id = message.reply_to_message.id if message.reply_to_message else message.id
