@@ -1,27 +1,30 @@
 import logging
 import logging.config
+import os
+import time
+from datetime import datetime
 import pytz
-import math, time
+from typing import Union, Optional, AsyncGenerator
 
+from fastapi import FastAPI, Request, Response
+from pyrogram import Client, __version__, types
+from pyrogram.raw.all import layer
+
+from database.ia_filterdb import Media
+from database.users_chats_db import db
+from info import SESSION, API_ID, API_HASH, BOT_TOKEN, LOG_STR, LOG_CHANNEL
+from utils import temp
+
+# Logging setup
 logging.config.fileConfig('logging.conf')
 logging.getLogger().setLevel(logging.INFO)
 logging.getLogger("pyrogram").setLevel(logging.ERROR)
 logging.getLogger("imdbpy").setLevel(logging.ERROR)
 
-from pyrogram import Client, __version__
-from pyrogram.raw.all import layer
-from database.ia_filterdb import Media
-from database.users_chats_db import db
-from info import SESSION, API_ID, API_HASH, BOT_TOKEN, LOG_STR, LOG_CHANNEL
-from utils import temp
-from typing import Union, Optional, AsyncGenerator
-from pyrogram import types
-import time, os
-from datetime import datetime
-from pytz import timezone
+# FastAPI app
+app = FastAPI()
 
 class Bot(Client):
-
     def __init__(self):
         super().__init__(
             name=SESSION,
@@ -31,6 +34,7 @@ class Bot(Client):
             workers=50,
             plugins={"root": "plugins"},
             sleep_threshold=5,
+            in_memory=True
         )
 
     async def start(self):
@@ -49,40 +53,17 @@ class Bot(Client):
         logging.info(f"{me.first_name} 𝖶𝗂𝗍𝗁 𝖥𝗈𝗋 𝖯𝗒𝗋𝗈𝗀𝗋𝖺𝗆 v{__version__} (Layer {layer}) 𝖲𝗍𝖺𝗋𝗍𝖾𝖽 𝖮𝗇 @{me.username}.")
         logging.info(LOG_STR)
         await self.send_message(chat_id=LOG_CHANNEL, text=f"{me.first_name} 𝖶𝗂𝗍𝗁 𝖥𝗈𝗋 𝖯𝗒𝗋𝗈𝗀𝗋𝖺𝗆 v{__version__} (Layer {layer}) 𝖲𝗍𝖺𝗋𝗍𝖾𝖽 𝖮𝗇 @{me.username}")
-        
+
     async def stop(self, *args):
         await super().stop()
         logging.info("Bot stopped. Bye.")
-    
+
     async def iter_messages(
         self,
         chat_id: Union[int, str],
         limit: int,
         offset: int = 0,
     ) -> Optional[AsyncGenerator["types.Message", None]]:
-        """Iterate through a chat sequentially.
-        This convenience method does the same as repeatedly calling :meth:`~pyrogram.Client.get_messages` in a loop, thus saving
-        you from the hassle of setting up boilerplate code. It is useful for getting the whole chat messages with a
-        single call.
-        Parameters:
-            chat_id (``int`` | ``str``):
-                Unique identifier (int) or username (str) of the target chat.
-                For your personal cloud (Saved Messages) you can simply use "me" or "self".
-                For a contact that exists in your Telegram address book you can use his phone number (str).
-                
-            limit (``int``):
-                Identifier of the last message to be returned.
-                
-            offset (``int``, *optional*):
-                Identifier of the first message to be returned.
-                Defaults to 0.
-        Returns:
-            ``Generator``: A generator yielding :obj:`~pyrogram.types.Message` objects.
-        Example:
-            .. code-block:: python
-                for message in app.iter_messages("pyrogram", 1, 15000):
-                    print(message.text)
-        """
         current = offset
         while True:
             new_diff = min(200, limit - current)
@@ -93,6 +74,26 @@ class Bot(Client):
                 yield message
                 current += 1
 
+bot_instance = Bot()
 
-app = Bot()
-app.run()
+# This is a placeholder. Pyrogram does not support webhooks natively.
+# You must use polling on a VPS or switch to python-telegram-bot for webhooks.
+@app.post("/webhook")
+async def handle_webhook(request: Request):
+    # Pyrogram does not support webhook updates natively.
+    # This is just a placeholder to show how you would handle it if it did.
+    return Response(status_code=200)
+
+@app.on_event("startup")
+async def startup_event():
+    await bot_instance.start()
+
+@app.on_event("shutdown")
+async def shutdown_event():
+    await bot_instance.stop()
+
+# For health checks
+@app.get("/health")
+async def health_check():
+    return {"status": "ok"}
+    
