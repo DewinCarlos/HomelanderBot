@@ -1,4 +1,3 @@
-pyrogram>=2.0.30
 tgcrypto
 pymongo[srv]==3.12.3
 coroutine
@@ -15,4 +14,7 @@ aiohttp
 psutil==5.9.4
 asyncio
 python-telegram-bot
-fastapi
+fastapi>=0.68.0
+uvicorn>=0.15.0
+pyrogram>=2.0.0
+python-multipart
